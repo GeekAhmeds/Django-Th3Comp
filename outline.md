@@ -14,7 +14,6 @@ Blog:
         -Autor [Relation With User]
         -Description
         -Created at
-        -Updated at
         -Status
         -Category [Relation With Category]
         -Tags
