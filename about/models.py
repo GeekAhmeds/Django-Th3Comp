@@ -1,4 +1,5 @@
 from django.db import models
+from phonenumber_field.modelfields import PhoneNumberField
 
 # Create your models here.
 
@@ -15,14 +16,12 @@ class AboutUs(models.Model):
     def __str__(self):
         return self.title
 
-    def get_absolute_url(self):
-        return reverse("AboutUs_detail", kwargs={"pk": self.pk})
 
 
 class ContactUs(models.Model):
     name = models.CharField(max_length=100)
     email = models.EmailField(max_length=254)
-    phone = models.PhoneNumberField()
+    phone_number = models.CharField(max_length=100)
     subject = models.CharField(max_length=250)
     text = models.TextField()
     
